@@ -36,9 +36,9 @@ a{color:inherit}
 .content{position:relative; z-index:1; max-width:780px; margin:0 auto; padding:0 22px}
 .spacer{height:12vh; min-height:78px}
 
-.intro{padding:7vh 0 3vh}
-.headshot{float:right; width:clamp(120px,26vw,180px); aspect-ratio:1; object-fit:cover; object-position:center top;
-  border-radius:16px; margin:.4rem 0 14px 22px}
+.intro{padding:7vh 0 3vh; display:flex; gap:28px; align-items:flex-start}
+.intro-text{flex:1 1 auto; min-width:0}
+.headshot{flex:0 0 auto; width:clamp(180px,32%,260px); height:auto; border-radius:16px; display:block}
 .intro h1{font-size:clamp(1.9rem,5.5vw,2.8rem); margin:0 0 .25rem; font-weight:800; letter-spacing:-.02em; line-height:1.1}
 .intro .tagline{color:var(--accent); font-weight:700; font-size:clamp(1.1rem,3vw,1.4rem); margin:0 0 1.1rem}
 .intro h2{font-size:clamp(1.5rem,4vw,2.2rem); margin:0 0 .8rem; font-weight:800; letter-spacing:-.01em; line-height:1.15}
@@ -100,4 +100,7 @@ footer a{color:var(--accent); text-decoration:none}
   /* cards stack: text first, painting as a full-width banner below */
   .card{flex-direction:column; gap:12px; padding:16px}
   .paper-art{width:100%; height:170px}
+  /* intro stacks: photo below the text */
+  .intro{flex-direction:column; gap:18px}
+  .headshot{width:min(260px,70%)}
 }
