@@ -37,6 +37,8 @@ a{color:inherit}
 .spacer{height:12vh; min-height:78px}
 
 .intro{padding:7vh 0 3vh}
+.headshot{float:right; width:clamp(120px,26vw,180px); aspect-ratio:1; object-fit:cover; object-position:center top;
+  border-radius:16px; margin:.4rem 0 14px 22px}
 .intro h1{font-size:clamp(1.9rem,5.5vw,2.8rem); margin:0 0 .25rem; font-weight:800; letter-spacing:-.02em; line-height:1.1}
 .intro .tagline{color:var(--accent); font-weight:700; font-size:clamp(1.1rem,3vw,1.4rem); margin:0 0 1.1rem}
 .intro h2{font-size:clamp(1.5rem,4vw,2.2rem); margin:0 0 .8rem; font-weight:800; letter-spacing:-.01em; line-height:1.15}

@@ -2,6 +2,7 @@
 const c = document.getElementById('bg');
 if (c) {
   const x = c.getContext('2d');
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const rgb = getComputedStyle(document.documentElement)
     .getPropertyValue('--accent-rgb').trim() || '254,93,159';
   let w, h, pts = [];
@@ -24,7 +25,7 @@ if (c) {
       }
       x.fillStyle='rgba('+rgb+',.6)'; x.beginPath(); x.arc(pts[i].x,pts[i].y,1.6,0,7); x.fill();
     }
-    requestAnimationFrame(draw);
+    if (!reduce) requestAnimationFrame(draw);
   }
   draw();
 }
